@@ -1,5 +1,5 @@
 @startuml
-    !define BASEPATH C:\Users\hozha\WorkingDir\My Projects\Diagrams\PlantUML Stylesheets
+    ' Don't forget to DEFINE BASEPATH!!
     !include BASEPATH/Murning/stylesheet_murning.iuml
     
     class IEmployee <<interface>>
