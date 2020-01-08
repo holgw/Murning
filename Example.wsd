@@ -1,0 +1,40 @@
+@startuml
+    !define BASEPATH C:\Users\hozha\WorkingDir\My Projects\Diagrams\PlantUML Stylesheets
+    !include BASEPATH/Murning/stylesheet_murning.iuml
+    
+    class IEmployee <<interface>>
+    {
+        ID: int
+        Name: string
+        Position: Position
+    }
+
+    class Manager
+    {
+        Subordinates: List<IEmployee>
+    }
+
+    class Employee
+    {
+        ID: int
+        Name: string
+        Position: Position
+    }
+
+    class Position <<enum>>
+    {
+        Engineer
+        Tester
+        Chief
+    }
+
+    note "Enumeration of \nworking positions" as Note1
+    note "Employee Interface" as Note2
+
+    Manager -u-|> Employee
+    Employee -r-> Position
+    Employee .u.|> IEmployee
+    Position - Note1
+    IEmployee - Note2
+
+@enduml
